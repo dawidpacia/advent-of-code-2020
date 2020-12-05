@@ -10,7 +10,7 @@ def count_trees(tree_map, step_x, step_y):
     pointer_x, pointer_y = 0, 0
     num_of_trees = 0
 
-    for i in range(0, y_len, step_y):
+    for _ in range(0, y_len, step_y):
         if tree_map[pointer_y][pointer_x % x_len] == "#":
             num_of_trees += 1
         pointer_x += step_x

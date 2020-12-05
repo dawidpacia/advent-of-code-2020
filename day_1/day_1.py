@@ -1,4 +1,3 @@
-
 def read_input():
     expenses = []
 
@@ -20,10 +19,12 @@ def calculate_result(expenses):
                 return result
         del expenses[0]
 
+
 expenses = read_input()
 print(calculate_result(expenses))
 
 # part 2
+
 
 def calculate_result_3(expenses):
     while len(expenses) != 0:
@@ -35,6 +36,7 @@ def calculate_result_3(expenses):
                     return result
         del expenses[0]
     print(expenses)
+
 
 expenses = read_input()
 print(calculate_result_3(expenses))

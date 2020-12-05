@@ -1,4 +1,3 @@
-
 def read_input():
     passwords_policy = []
 
@@ -13,7 +12,7 @@ def read_input():
             "min": int(min_value),
             "max": int(max_value),
             "letter": letter,
-            "password": password
+            "password": password,
         }
         passwords_policy.append(passwd_policy)
     return passwords_policy
@@ -33,9 +32,13 @@ print(num_of_valid_passwords)
 # part 2
 num_of_valid_passwords = 0
 for password_policy in passwords_policy:
-    password, first_idx, second_idx, letter = \
-        password_policy["password"], password_policy["min"], password_policy["max"], password_policy["letter"]
-    if bool(password[first_idx-1] == letter) != bool(password[second_idx-1] == letter):
+    password, first_idx, second_idx, letter = (
+        password_policy["password"],
+        password_policy["min"],
+        password_policy["max"],
+        password_policy["letter"],
+    )
+    if bool(password[first_idx - 1] == letter) != bool(password[second_idx - 1] == letter):
         num_of_valid_passwords += 1
 
 print(num_of_valid_passwords)
