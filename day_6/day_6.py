@@ -2,7 +2,8 @@ def read_input():
     with open("input.txt") as report_data:
         lines = report_data.readlines()
 
-    group, groups, = [], []
+    group, groups = [], []
+
     for line in lines:
         if not line.strip():
             groups.append(group)
